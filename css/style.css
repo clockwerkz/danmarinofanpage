@@ -1,0 +1,54 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+
+#hero {
+    height: 100vh;
+    width: 100%;
+    background-image: url(../img/dan_marino_color.jpg);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    z-index: -2;
+}
+
+section#hero:before {
+    content: '';
+    position: absolute;
+    background-image: url(../img/dan_marino_bw.jpg); 
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    width: 100%;
+    z-index: 0;
+    opacity: 1;
+    animation: hero-fader 3s;
+    animation-fill-mode: forwards;
+    animation-delay: 3s;
+    z-index: -1;
+}
+
+@keyframes hero-fader {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+.nav-header {
+    padding: 20px 5% 0 5%;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-header img {
+    height: 100%;
+}
+ 
